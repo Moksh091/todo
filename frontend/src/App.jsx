@@ -13,10 +13,14 @@ function App() {
   const result = await response.json();
   setTodos(result);
 }
+  const handleFetchTodos = () => {
+    main();
+  };
 
   return (    
       <div>
-        <CreateTodo></CreateTodo>
+        <CreateTodo/>
+          <button onClick={handleFetchTodos}>Fetch Todos</button>
         <Todos todos = {todos}></Todos>
       </div>    
   );
