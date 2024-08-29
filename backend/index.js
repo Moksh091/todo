@@ -54,3 +54,7 @@ app.put("/completed", async function(req, res) {
         msg: "Todo updated"
     })
 })
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});
